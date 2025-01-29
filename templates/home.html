@@ -11,20 +11,29 @@
         height: 360px;
         width: 100%;
         object-fit:cover;
+        margin-bottom:16px;
       }
     </style>
   </head>
-  
   <body>
+  {% include 'nav.html' %}
+  <img class ="image-fluid" id="banner" src="https://99188cb5-2ceb-4e17-90c7-a2ad5c2ec31c-00-36zit9zqxjp9y.worf.replit.dev/static/work.jpg">
     <div class = "container">
       <h1 class ="text-center mt-2 mb-4">Ahmed Careers</h1>
-      <img class ="image-fluid" id="banner" src="https://99188cb5-2ceb-4e17-90c7-a2ad5c2ec31c-00-36zit9zqxjp9y.worf.replit.dev/static/work.jpg">
-      <h2 class ="text-center mt-2 mb-4"">About our Careers</h2>
+  
       
+      <div>
+        <div class = "row">
+        <div class = "col-6">
     <p class ="lead">
       At Ahmed Careers, we believe in empowering individuals to reach their full potential. Whether you're just starting your career journey or looking to take the next step, we are here to help you find the perfect opportunity. We are passionate about connecting talented professionals with roles that match their skills, aspirations, and values. Our team of experienced professionals is dedicated to providing exceptional career guidance, mentorship, and support.
-      
-      <h1 class="text-center">Open positions</h2>
+    </p>
+      </div>
+          <div class ="col-6">
+        <img src="/static/working.jpg" style = "height:320px;border-radius:4px; width:500px; margin-bottom:16px;">
+      </div>
+     </div>
+      <h2 class="text-center mt-2-mb-4">Open positions</h2>
       
       <div>
         {% for job in jobs %}
@@ -38,5 +47,6 @@
       </div>
       </p>
       </div>
+    {% include 'footer.html' %}
   </body>
 </html>
